@@ -1,3 +1,6 @@
 # command to execute to run bat
 bat_main_cmd: 'bat'
 
+# command to execute to run bat, with 8-bit color, and a plain text display
+bat_8bit_color_plain_cmd: 'env COLORTERM=8bit bat --color="always" --style="plain"'
+
