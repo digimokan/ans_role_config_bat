@@ -1,0 +1,21 @@
+- name: "Create system bat config dir at '{{ bat_config_dir }}'"
+  ansible.builtin.file:
+    path: "{{ bat_config_dir }}"
+    state: directory
+    owner: 'root'
+    mode: '755'
+  vars:
+    bat_config_dir: "{{ system_bat_config_file_path | dirname }}"
+  become: true
+  become_user: root
+
+- name: "Configure system-wide bat settings in '{{ system_bat_config_file_path }}'"
+  ansible.builtin.template:
+    dest: "{{ system_bat_config_file_path }}"
+    src: "config.j2"
+    owner: 'root'
+    mode: '644'
+    force: yes
+  become: true
+  become_user: root
+

@@ -1,0 +1,7 @@
+- name: "Install the 'bat' package"
+  ansible.builtin.package:
+    name: bat
+    state: present
+  become: true
+  become_user: root
+

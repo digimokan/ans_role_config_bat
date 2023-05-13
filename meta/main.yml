@@ -1,0 +1,25 @@
+galaxy_info:
+  author: digimokan
+  description: "Install and configure the bat enhanced-cat utility"
+  license: "MIT"
+  min_ansible_version: 2.7
+  platforms:
+    - name: Archlinux
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
+        - kinetic
+        - lunar
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - archlinux
+    - ubuntu
+    - freebsd
+    - bat
+    - cat
+

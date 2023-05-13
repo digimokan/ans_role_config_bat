@@ -1,0 +1,3 @@
+# command to execute to run bat
+bat_main_cmd: 'bat'
+

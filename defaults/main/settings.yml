@@ -1,0 +1,5 @@
+# highlighting theme
+# At CLI, use "bat --list-themes"
+# For upstream theme list, see https://github.com/sharkdp/bat/blob/master/tests/assets.rs
+highlighting_theme_name: 'gruvbox-dark'
+
