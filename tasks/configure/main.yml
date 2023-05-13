@@ -1,19 +1,21 @@
-- name: "Create system bat config dir at '{{ bat_config_dir }}'"
+- name: "Create user bat config dir at '{{ user_bat_config_dir }}'"
   ansible.builtin.file:
-    path: "{{ bat_config_dir }}"
+    path: "{{ user_bat_config_dir }}"
     state: directory
-    owner: 'root'
+    owner: "{{ bat_user_name }}"
+    group: "{{ bat_user_name }}"
     mode: '755'
   vars:
-    bat_config_dir: "{{ system_bat_config_file_path | dirname }}"
+    user_bat_config_dir: "{{ bat_user_config_file_path | dirname }}"
   become: true
   become_user: root
 
-- name: "Configure system-wide bat settings in '{{ system_bat_config_file_path }}'"
+- name: "Configure user bat settings in '{{ bat_user_config_file_path }}'"
   ansible.builtin.template:
-    dest: "{{ system_bat_config_file_path }}"
+    dest: "{{ bat_user_config_file_path }}"
     src: "config.j2"
-    owner: 'root'
+    owner: "{{ bat_user_name }}"
+    group: "{{ bat_user_name }}"
     mode: '644'
     force: yes
   become: true

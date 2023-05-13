@@ -54,6 +54,8 @@ Install and configure the bat enhanced-cat utility.
          ansible.builtin.include_role:
            name: ans_role_config_bat
            public: yes
+         vars:
+           bat_user_name: 'user2'
    ```
 
 ## Role Options
@@ -61,6 +63,10 @@ Install and configure the bat enhanced-cat utility.
 See the role `defaults` files for main role vars listings:
 
   * [defaults](../defaults/main/)
+
+Define these _required_ vars for the role:
+
+  * `bat_user_name`: name of primary bat user to configure bat for
 
 ## Contributing
 

@@ -1,6 +1,3 @@
-# linux system-wide config file for bat
-linux_bat_config_file_path: "/etc/bat/config"
-
-# FreeBSD system-wide config file for bat
-freebsd_bat_config_file_path: "/usr/local/etc/bat/config"
+# user config file for bat
+bat_user_config_file_path: "/home/{{ bat_user_name }}/.config/bat/config"
 
