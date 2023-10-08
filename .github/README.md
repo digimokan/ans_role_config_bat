@@ -53,7 +53,7 @@ Install and configure the bat enhanced-cat utility.
        - name: "Install and configure the bat enhanced-cat utility"
          ansible.builtin.include_role:
            name: ans_role_config_bat
-           public: yes
+           public: true
          vars:
            bat_user_name: 'user2'
    ```

@@ -17,7 +17,7 @@
     owner: "{{ bat_user_name }}"
     group: "{{ bat_user_name }}"
     mode: '644'
-    force: yes
+    force: true
   become: true
   become_user: root
 
